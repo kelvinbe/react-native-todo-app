@@ -23,14 +23,14 @@ export default function App() {
 
   const submitHandler = (text) => {
 
-    if(text.length > 3) {
-      setClick(true)
+    if(text.length > 2) {
       setTodos((prevTodos) => {
         return [
           {text: text, key: Math.random().toString()},
           ...prevTodos
         ]
       }) 
+      setClick(true)
 
     }else{
       Alert.alert('OOPS', 'Todos must be over 3 chars long', [
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 40,
+    backgroundColor: 'pink',
     flex: 1
   },
   list: {
