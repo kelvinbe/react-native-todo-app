@@ -4,12 +4,19 @@ import { StyleSheet, Text, TextInput, View, FlatList, Button } from 'react-nativ
 
 
 
-function AddTodo({submitHandler}) {
+function AddTodo({submitHandler, click}) {
 
     const [text, setText] = useState('');
 
     const changeHandler = (val) => {
-            setText(val);
+
+    setText(val);
+    // if(click){
+    //     console.log('we got here')
+    //     setText('')
+    // }
+
+
 
     }
 
